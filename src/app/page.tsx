@@ -36,7 +36,7 @@ export default function Home() {
           <motion.img
             whileHover={{ scale: 3 }}
             className="h-full w-full duration-300 transition-all ease-in-out object-cover"
-            src={theme == 'dark' ? '/lightm.bmp' : '/map.webp'}
+            src={theme == 'light' ? '/lightm.bmp' : '/map.webp'}
             alt=""
           />
         </motion.div>
@@ -320,22 +320,142 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 overflow-hidden relative shadow-xl rounded-lg min-h-[50px] col-span-2 row-span-3 md:row-span-2 ">
-          <div className=" absolute w-full p-2 z-10">
+        <div className="dark:bg-[#1E1E1E] p-2 bg-white border dark:border-neutral-600 border-neutral-400/60 overflow-hidden relative shadow-xl rounded-lg min-h-[50px] col-span-2 row-span-3 md:row-span-2 ">
+          <div className="  w-full ">
             <div className="flex justify-between items-center ">
-              <p className="text-xs">Latest Work</p>
-              <p className="text-neutral-500 text-xs ">Waitlist</p>
+              <p className="text-xs">Skills</p>
             </div>
             <div className="w-full h-[0.4px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
           </div>
+          <div className="mt-3 px-2 h-max flex flex-col justify-between">
+            <div>
+              <h3 className="pb-2">Language</h3>
+              <div className="flex gap-4 items-center">
+                <Image
+                  width={40}
+                  height={40}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/js.png'}
+                  alt="icon"
+                />
+                <Image
+                  width={40}
+                  height={40}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/py.png'}
+                  alt="icon"
+                />
+                <Image
+                  width={40}
+                  height={40}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/go.png'}
+                  alt="icon"
+                />
+              </div>
+            </div>
+            <div>
+              <h3 className="pb-3">Frontend</h3>
+              <div className="flex gap-4 items-center">
+                <Image
+                  width={40}
+                  height={40}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/tail.png'}
+                  alt="icon"
+                />
+                <Image
+                  width={40}
+                  height={40}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/react.png'}
+                  alt="icon"
+                />
+                <Image
+                  width={40}
+                  height={40}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/next-js.svg'}
+                  alt="icon"
+                />
+                <Image
+                  width={40}
+                  height={40}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/vue.svg'}
+                  alt="icon"
+                />
+              </div>
+            </div>
+            <div>
+              <h3 className="pb-3">Backend </h3>
+              <div className="flex gap-4 items-center">
+                <Image
+                  width={40}
+                  height={40}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/node.png'}
+                  alt=""
+                />
+                <Image
+                  width={40}
+                  height={40}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/exp.avif'}
+                  alt=""
+                />
 
-          <Image
-            width={900}
-            height={300}
-            className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-            src={'/jo8.jpeg'}
-            alt=""
-          />
+                <Image
+                  width={40}
+                  height={40}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/nest.svg'}
+                  alt=""
+                />
+
+                <Image
+                  width={60}
+                  height={60}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/md.svg'}
+                  alt=""
+                />
+                <Image
+                  width={60}
+                  height={60}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/mysql.svg'}
+                  alt=""
+                />
+              </div>
+            </div>
+            <div>
+              <h3 className="pb-3">Other</h3>
+              <div className="flex gap-4 items-center">
+                <Image
+                  width={40}
+                  height={40}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/gitv.png'}
+                  alt="icon"
+                />
+                <Image
+                  width={40}
+                  height={40}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/hub.png'}
+                  alt="icon"
+                />
+                <Image
+                  width={40}
+                  height={40}
+                  className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+                  src={'/docker.png'}
+                  alt="icon"
+                />
+              </div>
+            </div>
+          </div>
         </div>
         <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg col-span-2  relative  overflow-hidden  ">
           <div className=" absolute w-full p-2 z-20">
@@ -354,37 +474,59 @@ export default function Home() {
                 Since 2023
               </p>
               <div>
-                <h4 className="text-xs font-bold">WebFlow</h4>
-                <p className="text-[11px] text-neutral-500">Official partner</p>
+                <h4 className="text-xs font-bold">Ecom</h4>
+                <p className="text-[11px] text-neutral-500">
+                  MERN-based e-commerce platform for seamless shopping
+                  experiences with MongoDB, Express.js, React.js, and Node.js.
+                </p>
               </div>
             </div>
-
             <div className="px-2 my-3 ">
               <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
             </div>
-
             <div className="flex  gap-x-3 px-2 relative ">
-              <p className="text-white  text-xs w-20 shrink-0  ">Since 2021</p>
+              <p className="text-white  text-xs w-20 shrink-0  ">Since 2023</p>
               <div>
-                <h4 className="text-xs font-bold">Awwward</h4>
-                <p className="text-[11px] text-neutral-500">Jury Member</p>
+                <h4 className="text-xs font-bold">Food</h4>
+                <p className="text-[11px] text-neutral-500">
+                  Scalable food app powered by MERN stack, offering seamless
+                  user experiences for ordering and delivery.
+                </p>
               </div>
             </div>
-
             <div className="px-2 my-3 ">
               <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
             </div>
-
+            <div className="flex  gap-x-3 px-2 relative ">
+              <p className="text-white  text-xs w-20 shrink-0  ">In 2023</p>
+              <div>
+                <h4 className="text-xs font-bold">Chat App</h4>
+                <p className="text-[11px] text-neutral-500">
+                  Real-time chat application utilizing MERN stack and Socket.IO
+                  for seamless communication and interactive user experiences.
+                </p>
+              </div>
+            </div>
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
             <div className="flex  gap-x-3  px-2 relative ">
               <p className="dark:text-white  text-xs w-20 shrink-0  ">
-                Since 2018
+                Since 2021
               </p>
               <div>
-                <h4 className="text-xs font-bold">ADC Club Global</h4>
-                <p className="text-[11px] text-neutral-500">Jury Member</p>
+                <h4 className="text-xs font-bold">Portfolio</h4>
+                <p className="text-[11px] text-neutral-500">
+                  A sleek portfolio app crafted using Next.js, showcasing your
+                  projects and skills elegantly. Built with simplicity in mind,
+                  it offers easy navigation and clean design to highlight your
+                  work effectively.
+                </p>
               </div>
+            </div>{' '}
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
             </div>
-
             <div className="px-2 my-3 ">
               <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
             </div>
@@ -418,22 +560,21 @@ export default function Home() {
           className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg h-44 p-2"
         >
           <div>
-            <p className="text-[10px] mt-4">
+            <Image
+              height={400}
+              width={400}
+              className="w-8 h-8 rounded-full object-cover"
+              src="/go.png"
+              alt=""
+            />
+            <p className="text-[10px]">
               Learning Go: Fast, concurrent, simple syntax. Ideal for web
               development, systems programming. Great performance, scalability.
             </p>
 
             <div className="flex items-center gap-x-2 mt-7">
-              <Image
-                height={400}
-                width={400}
-                className="w-8 h-8 rounded-full object-cover"
-                src="/jo2.jpeg"
-                alt=""
-              />
-
               <div className="">
-                <p className="text-xs">Surender </p>
+                <p className="text-xs">Surender Pratap Singh</p>
                 {/* <p className="text-xs">Founder, Joscript</p> */}
               </div>
             </div>
