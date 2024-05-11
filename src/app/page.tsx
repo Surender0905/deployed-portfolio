@@ -1,113 +1,467 @@
+/* eslint-disable react/no-unescaped-entities */
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
+import {
+  PiArrowUpRight,
+  PiArrowDownThin,
+  PiGithubLogoThin,
+  PiLinkedinLogoLight,
+} from "react-icons/pi";
+
+import { IoIosMailUnread } from "react-icons/io";
+import Link from "next/link";
+import { RiTwitterXLine } from "react-icons/ri";
+import { Tooltip } from "@nextui-org/react";
 
 export default function Home() {
+  const { theme } = useTheme();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <div className=" w-full  px-4 pt-8 max-w-6xl mx-auto">
+      <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-5 grid-flow-row-dense">
+        <motion.div
+          drag
+          dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+          dragElastic={1}
+          className="border cursor-pointer z-20 dark:border-neutral-600 border-neutral-400/60 overflow-hidden relative shadow-xl rounded-lg sm:h-40"
+        >
+          <div className=" absolute w-full p-2 z-10">
+            <div className="flex justify-between items-center ">
+              <p className="text-xs">Location</p>
+              <p className="text-neutral-500 text-xs ">Pune</p>
+            </div>
+            <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
+          </div>
+          <motion.img
+            whileHover={{ scale: 3 }}
+            className="h-full w-full duration-300 transition-all ease-in-out object-cover"
+            src={theme == "dark" ? "/lightm.bmp" : "/map.webp"}
+            alt=""
+          />
+        </motion.div>
+        <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl relative rounded-lg sm:h-40  ">
+          <div className=" absolute w-full p-2">
+            <div className="flex justify-between items-center ">
+              <p className="text-xs">Mode</p>
+              <div>
+                <span>
+                  <span className="mr-1.5 flex justify-center h-2 w-2 items-center ">
+                    <span
+                      className={`absolute flex  w-2 h-2 rounded-full  opacity-75 animation-delay-4000 animate-ping dark:bg-lime-500 bg-yellow-400`}
+                    ></span>
+                    <span
+                      className={`relative inline-flex w-1 h-1 rounded-full dark:bg-lime-500 g-yellow-400`}
+                    ></span>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
+            <div className="">
+              <p className="text-xs font-semibold max-sm:mt-16 sm:mt-4  ">
+                Available for freelance <br /> design projects. Hit me up <br />{" "}
+                for a collab 🦾
+              </p>
+
+              <button className="text-xs flex w-full items-center justify-between border dark:border-neutral-600 border-neutral-400/60  mt-3 rounded-full p-1 px-2 dark:bg-neutral-700/40 sm:w-full">
+                <span>Contact me</span>
+                <PiArrowUpRight />
+              </button>
+            </div>
+          </div>
+        </div>
+        <motion.div
+          drag
+          dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+          dragElastic={1}
+          className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60  z-20 cursor-pointer relative shadow-xl rounded-lg  col-span-2 "
+        >
+          <div className=" absolute w-full p-2 z-10">
+            <div className="flex justify-between items-center ">
+              <p className="text-xs">About</p>
+              <p className="text-neutral-500 text-xs ">Surender Pratap Singh</p>
+            </div>
+            <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
+          </div>
+
+          <div className="mt-14 px-3 pb-3">
+            <p className="text-xs font-semibold   leading-5">
+              Hey there! I'm Surender Pratap Singh, a web developer with three
+              years of experience. Specializing in the MERN stack, I build
+              robust, scalable web applications. From MongoDB to Node.js, I'm
+              passionate about crafting efficient, user-friendly experiences.
+              Let's create something awesome together! let's collaborate and
+              bring your creative visions to life
+            </p>
+          </div>
+        </motion.div>
+        <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg col-span-2 row-span-2 relative  overflow-hidden  ">
+          <div className=" absolute w-full p-2 z-20">
+            <p className="text-xs">Experience & Education</p>
+            <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
+          </div>
+
+          {/* Gradient  */}
+          <div className=" bg-gradient-to-b  w-full absolute z-10 from-white via-white dark:from-[#1E1E1E] dark:via-[#1E1E1E] to-transparent   h-20 transition-all ease-in duration-200" />
+          {/* gradient ends */}
+
+          <div className=" overflow-y-auto h-[340px] overflow-hidden no-scrollbar scroll-smooth relative ">
+            {/* Starts */}
+            <div className="flex gap-x-3 mt-16 px-2  ">
+              <p className="dark:text-neutral-400  text-xs w-20 shrink-0  ">
+                2002 -- 2012
+              </p>
+              <div>
+                <h4 className="text-xs font-bold">Creative Studio Owner</h4>
+                <p className="text-[11px] text-neutral-500">
+                  Self-employed at my own creative studio, delivering innovative
+                  design solutions and giving value to your brand experience.
+                </p>
+              </div>
+            </div>
+
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
+
+            <div className="flex  gap-x-3 px-2 relative ">
+              <p className="dark:text-neutral-400  text-xs w-20 shrink-0  ">
+                2020 -- 2022
+              </p>
+              <div>
+                <h4 className="text-xs font-bold">Nike Headquarters</h4>
+                <p className="text-[11px] text-neutral-500">
+                  Designer & Creative Director
+                </p>
+              </div>
+            </div>
+
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
+
+            <div className="flex  gap-x-3  px-2 relative ">
+              <p className="dark:text-neutral-400  text-xs w-20 shrink-0  ">
+                2018 -- 2020
+              </p>
+              <div>
+                <h4 className="text-xs font-bold">Spotify</h4>
+                <p className="text-[11px] text-neutral-500">
+                  Designer & Art Director.
+                </p>
+              </div>
+            </div>
+
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
+
+            <div className="flex  gap-x-3  px-2 relative ">
+              <p className="dark:text-neutral-400  text-xs w-20 shrink-0  ">
+                2016 -- 2018
+              </p>
+              <div>
+                <h4 className="text-xs font-bold">Apple</h4>
+                <p className="text-[11px] text-neutral-500">Product Designer</p>
+              </div>
+            </div>
+
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
+
+            <div className="flex  gap-x-3  px-2 relative ">
+              <p className="dark:text-neutral-400  text-xs w-20 shrink-0  ">
+                2014 -- 2016
+              </p>
+              <div>
+                <h4 className="text-xs font-bold">Royal Academy of Arts</h4>
+                <p className="text-[11px] text-neutral-500">
+                  Graduate Master’s Degree
+                </p>
+              </div>
+            </div>
+
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
+
+            <div className="flex  gap-x-3  px-2 relative ">
+              <p className="dark:text-white  text-xs w-20 shrink-0  ">
+                2012 -- 2016
+              </p>
+              <div>
+                <h4 className="text-xs font-bold">Zurich University of Arts</h4>
+                <p className="text-[11px] text-neutral-500">
+                  Visual Communication
+                </p>
+              </div>
+            </div>
+
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
+
+            <div className="flex  gap-x-3  px-2 relative ">
+              <p className="dark:text-white  text-xs w-20 shrink-0  ">
+                2011 -- 2012
+              </p>
+              <div>
+                <h4 className="text-xs font-bold">Vogue France</h4>
+                <p className="text-[11px] text-neutral-500">Graphic Designer</p>
+              </div>
+            </div>
+
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
+
+            <div className="flex  gap-x-3  px-2 relative ">
+              <p className="dark:text-white  text-xs w-20 shrink-0  ">
+                2010 -- 2011
+              </p>
+              <div>
+                <h4 className="text-xs font-bold">Vignelli Associates</h4>
+                <p className="text-[11px] text-neutral-500">Internship</p>
+              </div>
+            </div>
+
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
+
+            <div className="flex  gap-x-3  mb-6 px-2 relative ">
+              <p className="dar:text-white  text-xs w-20 shrink-0  ">
+                2010 -- 2011
+              </p>
+              <div>
+                <h4 className="text-xs font-bold">Norm Zurich</h4>
+                <p className="text-[11px] text-neutral-500">Internship</p>
+              </div>
+            </div>
+          </div>
+          {/* Gradient  */}
+          <div className=" bg-gradient-to-t  w-full absolute z-10 from-white via-white dark:from-[#1E1E1E] dark:via-[#1E1E1E] to-transparent bottom-0   h-12 transition-all ease-in duration-200" />
+          {/* gradient ends */}
+        </div>
+        <div className=" dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60  shadow-xl rounded-lg min-h-[50px] col-span-2 row-span-2 relative ">
+          <div className=" absolute w-full p-2 z-20">
+            <p className="text-xs">Projects</p>
+            <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
+          </div>
+
+          <div className="mt-8 px-2">
+            <div className="bg-[#F5F5F5]  dark:bg-[#1B1B1B] rounded-md px-1  relative">
+              <div className="flex justify-between items-center p-2  gap-x-2 mt-14">
+                <Image
+                  width={200}
+                  height={200}
+                  className="w-14 h-14 rounded-full object-cover"
+                  src="/jo4.jpeg"
+                  alt=""
+                />
+
+                <div>
+                  <p className="text-xs">Fusion Pro Presentation</p>
+                  <p className="text-xs">
+                    I've come up with something truly unique
+                  </p>
+                </div>
+
+                <ul className="menu">
+                  <a href="#0"></a>
+                </ul>
+              </div>
+            </div>
+            <div className="bg-[#F5F5F5]  dark:bg-[#1B1B1B] rounded-md px-1  relative">
+              <div className="flex justify-between items-center p-2  gap-x-2 mt-4">
+                <Image
+                  width={300}
+                  height={300}
+                  className="w-14 h-14 rounded-full object-cover"
+                  src="/jo4.jpeg"
+                  alt=""
+                />
+
+                <div>
+                  <p className="text-xs">Fusion Pro Presentation</p>
+                  <p className="text-xs">
+                    I've come up with something truly unique
+                  </p>
+                </div>
+
+                <ul className="menu">
+                  <a href="#0"></a>
+                </ul>
+              </div>
+            </div>
+            <div className="bg-[#F5F5F5]  dark:bg-[#1B1B1B] rounded-md px-1  relative">
+              <div className="flex justify-between items-center p-2  gap-x-2 mt-4">
+                <Image
+                  width={300}
+                  height={300}
+                  className="w-14 h-14 rounded-full object-cover"
+                  src="/jo4.jpeg"
+                  alt=""
+                />
+
+                <div>
+                  <p className="text-xs">Fusion Pro Presentation</p>
+                  <p className="text-xs">
+                    I've come up with something truly unique
+                  </p>
+                </div>
+
+                <ul className="menu">
+                  <a href="#0"></a>
+                </ul>
+              </div>
+            </div>
+          </div>
+          {/* <Products /> */}
+        </div>
+        <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg min-h-[50px] col-span-2  relative">
+          <div className=" absolute w-full p-2 z-20">
+            <p className="text-xs">Get in touch</p>
+            <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
+          </div>
+
+          <div className="mt-14 mb-4">
+            <div className="flex justify-center gap-x-2 px-2">
+              <Tooltip showArrow={true} content="X (Twitter)">
+                <Link
+                  href={"https://twitter.com/roshan0905"}
+                  className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
+                >
+                  <RiTwitterXLine className="text-xl" />
+                </Link>
+              </Tooltip>
+              <Tooltip showArrow={true} content="GitHub">
+                <Link
+                  href={"https://github.com/Surender0905"}
+                  className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
+                >
+                  <PiGithubLogoThin className="text-xl" />
+                </Link>
+              </Tooltip>
+              <Tooltip showArrow={true} content="Linkedin">
+                <Link
+                  href={"https://www.linkedin.com/in/surender0905/"}
+                  className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
+                >
+                  <PiLinkedinLogoLight className="text-xl" />
+                </Link>
+              </Tooltip>
+              <Tooltip showArrow={true} content="E-mail">
+                <Link
+                  href={"https://twitter.com/roshan0905"}
+                  className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
+                >
+                  <IoIosMailUnread className="text-xl" />
+                </Link>
+              </Tooltip>
+            </div>
+          </div>
+        </div>
+        {/* <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 overflow-hidden relative shadow-xl rounded-lg min-h-[50px] col-span-2 row-span-3 md:row-span-2 ">
+          <div className=" absolute w-full p-2 z-10">
+            <div className="flex justify-between items-center ">
+              <p className="text-xs">Latest Work</p>
+              <p className="text-neutral-500 text-xs ">Waitlist</p>
+            </div>
+            <div className="w-full h-[0.4px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
+          </div>
+
+          <Image
+            width={900}
+            height={300}
+            className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
+            src={"/jo8.jpeg"}
+            alt=""
+          />
+        </div> */}
+
+        <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg z-20 h-44 relative">
+          <div className=" absolute w-full p-2 z-20">
+            <p className="text-xs">Newsletter</p>
+            <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
+          </div>
+
+          <div className="mt-24 flex flex-col items-center w-full px-2 ">
+            <input
+              className=" w-full rounded-full text-sm p-1 placeholder:text-neutral-700 outline-none border dark:border-neutral-600 border-neutral-400/60 pl-6 bg-neutral-900"
+              type="email"
+              placeholder="name@email.com"
             />
-          </a>
+            <button className="text-xs  w-full  border dark:border-neutral-600 border-neutral-400/60  mt-2 rounded-full p-1 px-2 dark:bg-neutral-700/40">
+              <span>Contact me</span>
+            </button>
+          </div>
+        </div>
+        <motion.div
+          drag
+          dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+          dragElastic={1}
+          className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg h-44 p-2"
+        >
+          <div>
+            <p className="text-[10px] mt-4">
+              Learning Go: Fast, concurrent, simple syntax. Ideal for web
+              development, systems programming. Great performance, scalability.
+            </p>
+
+            <div className="flex items-center gap-x-2 mt-7">
+              <Image
+                height={400}
+                width={400}
+                className="w-8 h-8 rounded-full object-cover"
+                src="/jo2.jpeg"
+                alt=""
+              />
+
+              <div className="">
+                <p className="text-xs">Surender </p>
+                {/* <p className="text-xs">Founder, Joscript</p> */}
+              </div>
+            </div>
+          </div>
+        </motion.div>
+        <div className="  rounded-lg  grid grid-cols-2 gap-2 col-span-2 row-span-2 z-40">
+          <motion.div
+            drag
+            dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+            dragElastic={1}
+            className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg  h-44 p-2 relative "
+          >
+            <div className=" absolute w-full p-2 z-20">
+              <p className="text-xs">Years of Experience</p>
+              <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
+            </div>
+            <div className="mt-10  w-full flex justify-center items-center">
+              <h1 className="text-8xl">3+</h1>
+            </div>
+          </motion.div>
+          <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg h-44 p-2 relative z-40">
+            <div>
+              <div className=" absolute w-full p-2 z-20">
+                <p className="text-xs">CV</p>
+                <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
+              </div>
+            </div>
+            <div className="mt-24 w-full">
+              <button className="text-xs flex w-full items-center justify-between border dark:border-neutral-600 border-neutral-400/60   rounded-full p-1 px-2 dark:bg-neutral-700/40">
+                <span>View</span>
+                <PiArrowUpRight />
+              </button>
+              <button className="text-xs flex w-full mt-3 items-center justify-between border dark:border-neutral-600 border-neutral-400/60   rounded-full p-1 px-2 dark:bg-neutral-700/40">
+                <span>Download</span>
+                <PiArrowDownThin />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
