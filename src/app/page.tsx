@@ -544,7 +544,7 @@ export default function Home() {
 
           <div className="mt-24 flex flex-col items-center w-full px-2 ">
             <input
-              className=" w-full rounded-full text-sm p-1 placeholder:text-neutral-700 outline-none border dark:border-neutral-600 border-neutral-400/60 pl-6 bg-neutral-900"
+              className=" w-full rounded-full text-sm p-1 placeholder:text-neutral-700 outline-none border dark:border-neutral-600 border-neutral-400/60 pl-6 dark:bg-neutral-900"
               type="email"
               placeholder="name@email.com"
             />
