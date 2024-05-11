@@ -1,13 +1,13 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 
-import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { AnimatePresence, motion, useCycle } from 'framer-motion';
 
-import { useState } from "react";
+import { useState } from 'react';
 
-import { useTheme } from "next-themes";
-import { PiArrowRightThin } from "react-icons/pi";
-import Image from "next/image";
+import { useTheme } from 'next-themes';
+import { PiArrowRightThin } from 'react-icons/pi';
+import Image from 'next/image';
 
 function Header() {
   const [open, cycleOpen] = useCycle<any>(false, true);
@@ -17,9 +17,9 @@ function Header() {
   const { theme, systemTheme, setTheme } = useTheme();
 
   const links = [
-    { name: "/night-mode.png", theme: "dark" },
-    { name: "/brightness.svg", theme: "light" },
-    { name: "/cogwheel.svg", theme: "system" },
+    { name: '/night-mode.png', theme: 'dark' },
+    { name: '/brightness.svg', theme: 'light' },
+    { name: '/cogwheel.svg', theme: 'system' },
   ];
 
   const itemVariants = {
@@ -46,13 +46,13 @@ function Header() {
 
   const ButtonVariant = {
     closed: {
-      height: "1.6rem",
+      height: '1.6rem',
       transition: { duration: 0.4 },
     },
 
     open: {
-      height: "3.7rem",
-      transition: { when: "beforeChildren", duration: 0.4 },
+      height: '3.7rem',
+      transition: { when: 'beforeChildren', duration: 0.4 },
     },
   };
 
@@ -74,14 +74,14 @@ function Header() {
     // setTheme(newTheme);
     cycleOpen(!open ? 1 : 0);
 
-    if (newTheme === "system") {
-      setHovertheme(" System Theme");
+    if (newTheme === 'system') {
+      setHovertheme(' System Theme');
       setTheme(newTheme);
-    } else if (newTheme === "light") {
-      setHovertheme(" System Theme");
+    } else if (newTheme === 'light') {
+      setHovertheme(' System Theme');
       setTheme(newTheme);
-    } else if (newTheme === "dark") {
-      setHovertheme(" System Theme");
+    } else if (newTheme === 'dark') {
+      setHovertheme(' System Theme');
       setTheme(newTheme);
     }
   };
@@ -97,7 +97,7 @@ function Header() {
           key="parent"
           variants={ButtonVariant}
           initial="closed"
-          animate={open ? "open" : "closed"}
+          animate={open ? 'open' : 'closed'}
           exit={{
             height: 0,
             transition: { delay: 0.7, duration: 0.3 },
@@ -175,7 +175,7 @@ function Header() {
 
           <div>
             <h4 className="text-xs ">Surender Pratap Singh</h4>
-            <p className="text-[#828282] text-xs">Software Developer</p>
+            <p className="text-[#828282] text-xs">Fullstack Developer</p>
           </div>
         </div>
 

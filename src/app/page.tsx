@@ -1,19 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
+'use client';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 import {
   PiArrowUpRight,
   PiArrowDownThin,
   PiGithubLogoThin,
   PiLinkedinLogoLight,
-} from "react-icons/pi";
+} from 'react-icons/pi';
 
-import { IoIosMailUnread } from "react-icons/io";
-import Link from "next/link";
-import { RiTwitterXLine } from "react-icons/ri";
-import { Tooltip } from "@nextui-org/react";
+import { IoIosMailUnread } from 'react-icons/io';
+import Link from 'next/link';
+import { RiTwitterXLine } from 'react-icons/ri';
+import { Tooltip } from '@nextui-org/react';
 
 export default function Home() {
   const { theme } = useTheme();
@@ -36,7 +36,7 @@ export default function Home() {
           <motion.img
             whileHover={{ scale: 3 }}
             className="h-full w-full duration-300 transition-all ease-in-out object-cover"
-            src={theme == "dark" ? "/lightm.bmp" : "/map.webp"}
+            src={theme == 'dark' ? '/lightm.bmp' : '/map.webp'}
             alt=""
           />
         </motion.div>
@@ -60,7 +60,7 @@ export default function Home() {
             <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
             <div className="">
               <p className="text-xs font-semibold max-sm:mt-16 sm:mt-4  ">
-                Available for freelance <br /> design projects. Hit me up <br />{" "}
+                Available for freelance <br /> design projects. Hit me up <br />{' '}
                 for a collab 🦾
               </p>
 
@@ -110,31 +110,20 @@ export default function Home() {
             {/* Starts */}
             <div className="flex gap-x-3 mt-16 px-2  ">
               <p className="dark:text-neutral-400  text-xs w-20 shrink-0  ">
-                2002 -- 2012
+                2023 -- Present
               </p>
               <div>
-                <h4 className="text-xs font-bold">Creative Studio Owner</h4>
+                <h4 className="text-xs font-bold">
+                  Trimir Technologies Pvt Ltd
+                </h4>
                 <p className="text-[11px] text-neutral-500">
-                  Self-employed at my own creative studio, delivering innovative
-                  design solutions and giving value to your brand experience.
+                  Fullstack Developer
                 </p>
               </div>
             </div>
 
             <div className="px-2 my-3 ">
               <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
-            </div>
-
-            <div className="flex  gap-x-3 px-2 relative ">
-              <p className="dark:text-neutral-400  text-xs w-20 shrink-0  ">
-                2020 -- 2022
-              </p>
-              <div>
-                <h4 className="text-xs font-bold">Nike Headquarters</h4>
-                <p className="text-[11px] text-neutral-500">
-                  Designer & Creative Director
-                </p>
-              </div>
             </div>
 
             <div className="px-2 my-3 ">
@@ -143,87 +132,15 @@ export default function Home() {
 
             <div className="flex  gap-x-3  px-2 relative ">
               <p className="dark:text-neutral-400  text-xs w-20 shrink-0  ">
-                2018 -- 2020
+                2021 -- 2023
               </p>
               <div>
-                <h4 className="text-xs font-bold">Spotify</h4>
+                <h4 className="text-xs font-bold">
+                  Igniterpro Technologies Pvt Ltd
+                </h4>
                 <p className="text-[11px] text-neutral-500">
-                  Designer & Art Director.
+                  Frontend Developer
                 </p>
-              </div>
-            </div>
-
-            <div className="px-2 my-3 ">
-              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
-            </div>
-
-            <div className="flex  gap-x-3  px-2 relative ">
-              <p className="dark:text-neutral-400  text-xs w-20 shrink-0  ">
-                2016 -- 2018
-              </p>
-              <div>
-                <h4 className="text-xs font-bold">Apple</h4>
-                <p className="text-[11px] text-neutral-500">Product Designer</p>
-              </div>
-            </div>
-
-            <div className="px-2 my-3 ">
-              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
-            </div>
-
-            <div className="flex  gap-x-3  px-2 relative ">
-              <p className="dark:text-neutral-400  text-xs w-20 shrink-0  ">
-                2014 -- 2016
-              </p>
-              <div>
-                <h4 className="text-xs font-bold">Royal Academy of Arts</h4>
-                <p className="text-[11px] text-neutral-500">
-                  Graduate Master’s Degree
-                </p>
-              </div>
-            </div>
-
-            <div className="px-2 my-3 ">
-              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
-            </div>
-
-            <div className="flex  gap-x-3  px-2 relative ">
-              <p className="dark:text-white  text-xs w-20 shrink-0  ">
-                2012 -- 2016
-              </p>
-              <div>
-                <h4 className="text-xs font-bold">Zurich University of Arts</h4>
-                <p className="text-[11px] text-neutral-500">
-                  Visual Communication
-                </p>
-              </div>
-            </div>
-
-            <div className="px-2 my-3 ">
-              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
-            </div>
-
-            <div className="flex  gap-x-3  px-2 relative ">
-              <p className="dark:text-white  text-xs w-20 shrink-0  ">
-                2011 -- 2012
-              </p>
-              <div>
-                <h4 className="text-xs font-bold">Vogue France</h4>
-                <p className="text-[11px] text-neutral-500">Graphic Designer</p>
-              </div>
-            </div>
-
-            <div className="px-2 my-3 ">
-              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
-            </div>
-
-            <div className="flex  gap-x-3  px-2 relative ">
-              <p className="dark:text-white  text-xs w-20 shrink-0  ">
-                2010 -- 2011
-              </p>
-              <div>
-                <h4 className="text-xs font-bold">Vignelli Associates</h4>
-                <p className="text-[11px] text-neutral-500">Internship</p>
               </div>
             </div>
 
@@ -233,13 +150,52 @@ export default function Home() {
 
             <div className="flex  gap-x-3  mb-6 px-2 relative ">
               <p className="dar:text-white  text-xs w-20 shrink-0  ">
-                2010 -- 2011
+                2013 -- 2019
               </p>
               <div>
-                <h4 className="text-xs font-bold">Norm Zurich</h4>
-                <p className="text-[11px] text-neutral-500">Internship</p>
+                <h4 className="text-xs font-bold">
+                  D. Y. Patil College of Engineering Akurdi Pune
+                </h4>
+                <p className="text-[11px] text-neutral-500">
+                  Bachelor of engineering
+                </p>
               </div>
             </div>
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
+            <div className="flex  gap-x-3  px-2 relative ">
+              <p className="dark:text-white  text-xs w-20 shrink-0  ">
+                2010 -- 2012
+              </p>
+              <div>
+                <h4 className="text-xs font-bold">
+                  Army Public School, Lucknow
+                </h4>
+                <p className="text-[11px] text-neutral-500">HSC (PCM)</p>
+              </div>
+            </div>
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
+
+            <div className="flex  gap-x-3  px-2 relative ">
+              <p className="dark:text-white  text-xs w-20 shrink-0  ">
+                2008 -- 2009
+              </p>
+              <div>
+                <h4 className="text-xs font-bold">
+                  Army Public School Kandrori, Punjab
+                </h4>
+                <p className="text-[11px] text-neutral-500">SSC</p>
+              </div>
+            </div>
+          </div>
+          <div className="px-2 my-3 ">
+            <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+          </div>
+          <div className="px-2 my-3 ">
+            <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
           </div>
           {/* Gradient  */}
           <div className=" bg-gradient-to-t  w-full absolute z-10 from-white via-white dark:from-[#1E1E1E] dark:via-[#1E1E1E] to-transparent bottom-0   h-12 transition-all ease-in duration-200" />
@@ -331,7 +287,7 @@ export default function Home() {
             <div className="flex justify-center gap-x-2 px-2">
               <Tooltip showArrow={true} content="X (Twitter)">
                 <Link
-                  href={"https://twitter.com/roshan0905"}
+                  href={'https://twitter.com/roshan0905'}
                   className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
                 >
                   <RiTwitterXLine className="text-xl" />
@@ -339,7 +295,7 @@ export default function Home() {
               </Tooltip>
               <Tooltip showArrow={true} content="GitHub">
                 <Link
-                  href={"https://github.com/Surender0905"}
+                  href={'https://github.com/Surender0905'}
                   className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
                 >
                   <PiGithubLogoThin className="text-xl" />
@@ -347,7 +303,7 @@ export default function Home() {
               </Tooltip>
               <Tooltip showArrow={true} content="Linkedin">
                 <Link
-                  href={"https://www.linkedin.com/in/surender0905/"}
+                  href={'https://www.linkedin.com/in/surender0905/'}
                   className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
                 >
                   <PiLinkedinLogoLight className="text-xl" />
@@ -355,7 +311,7 @@ export default function Home() {
               </Tooltip>
               <Tooltip showArrow={true} content="E-mail">
                 <Link
-                  href={"https://twitter.com/roshan0905"}
+                  href={'https://twitter.com/roshan0905'}
                   className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
                 >
                   <IoIosMailUnread className="text-xl" />
@@ -364,7 +320,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 overflow-hidden relative shadow-xl rounded-lg min-h-[50px] col-span-2 row-span-3 md:row-span-2 ">
+        <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 overflow-hidden relative shadow-xl rounded-lg min-h-[50px] col-span-2 row-span-3 md:row-span-2 ">
           <div className=" absolute w-full p-2 z-10">
             <div className="flex justify-between items-center ">
               <p className="text-xs">Latest Work</p>
@@ -377,10 +333,66 @@ export default function Home() {
             width={900}
             height={300}
             className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-            src={"/jo8.jpeg"}
+            src={'/jo8.jpeg'}
             alt=""
           />
-        </div> */}
+        </div>
+        <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg col-span-2  relative  overflow-hidden  ">
+          <div className=" absolute w-full p-2 z-20">
+            <p className="text-xs">Side Projects</p>
+            <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
+          </div>
+
+          {/* Gradient  */}
+          <div className=" bg-gradient-to-b  w-full absolute z-10 from-white via-white dark:from-[#1E1E1E] dark:via-[#1E1E1E] to-transparent   h-20 transition-all ease-in duration-200" />
+          {/* gradient ends */}
+
+          <div className=" overflow-y-auto h-[180px] overflow-hidden no-scrollbar scroll-smooth relative ">
+            {/* Starts */}
+            <div className="flex gap-x-3 mt-14 px-2  ">
+              <p className="dark:text-white  text-xs w-20 shrink-0  ">
+                Since 2023
+              </p>
+              <div>
+                <h4 className="text-xs font-bold">WebFlow</h4>
+                <p className="text-[11px] text-neutral-500">Official partner</p>
+              </div>
+            </div>
+
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
+
+            <div className="flex  gap-x-3 px-2 relative ">
+              <p className="text-white  text-xs w-20 shrink-0  ">Since 2021</p>
+              <div>
+                <h4 className="text-xs font-bold">Awwward</h4>
+                <p className="text-[11px] text-neutral-500">Jury Member</p>
+              </div>
+            </div>
+
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
+
+            <div className="flex  gap-x-3  px-2 relative ">
+              <p className="dark:text-white  text-xs w-20 shrink-0  ">
+                Since 2018
+              </p>
+              <div>
+                <h4 className="text-xs font-bold">ADC Club Global</h4>
+                <p className="text-[11px] text-neutral-500">Jury Member</p>
+              </div>
+            </div>
+
+            <div className="px-2 my-3 ">
+              <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
+            </div>
+          </div>
+          {/* Gradient  */}
+          <div className=" bg-gradient-to-t  w-full absolute z-10 from-white via-white dark:from-[#1E1E1E] dark:via-[#1E1E1E] to-transparent bottom-0   h-12 transition-all ease-in duration-200" />
+          {/* gradient ends */}
+        </div>
 
         <div className="dark:bg-[#1E1E1E] bg-white border dark:border-neutral-600 border-neutral-400/60 shadow-xl rounded-lg z-20 h-44 relative">
           <div className=" absolute w-full p-2 z-20">
