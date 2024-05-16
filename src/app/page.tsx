@@ -473,7 +473,7 @@ export default function Home() {
           <div className=" bg-gradient-to-b  w-full absolute z-10 from-white via-white dark:from-[#1E1E1E] dark:via-[#1E1E1E] to-transparent   h-20 transition-all ease-in duration-200" />
           {/* gradient ends */}
 
-          <div className=" overflow-y-auto h-[180px] overflow-hidden no-scrollbar scroll-smooth relative ">
+          <div className=" overflow-y-auto cursor-pointer h-[180px] overflow-hidden no-scrollbar scroll-smooth relative ">
             {/* Starts */}
             <div className="flex gap-x-3 mt-14 px-2  ">
               <p className="dark:text-white  text-xs w-20 shrink-0  ">
@@ -554,9 +554,12 @@ export default function Home() {
               type="email"
               placeholder="name@email.com"
             />
-            <button className="text-xs  w-full  border dark:border-neutral-600 border-neutral-400/60  mt-2 rounded-full p-1 px-2 dark:bg-neutral-700/40">
+            <a
+              href="mailto:rk31151@gmail.com"
+              className="text-xs  w-full  border dark:border-neutral-600 border-neutral-400/60  mt-2 rounded-full p-1 px-2 dark:bg-neutral-700/40"
+            >
               <span>Contact me</span>
-            </button>
+            </a>
           </div>
         </div>
         <motion.div
