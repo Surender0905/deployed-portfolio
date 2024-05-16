@@ -607,10 +607,13 @@ export default function Home() {
                 <span>View</span>
                 <PiArrowUpRight />
               </button>
-              <button className="text-xs flex w-full mt-3 items-center justify-between border dark:border-neutral-600 border-neutral-400/60   rounded-full p-1 px-2 dark:bg-neutral-700/40">
+              <a
+                href="/cv.pdf"
+                className="text-xs flex w-full mt-3 items-center justify-between border dark:border-neutral-600 border-neutral-400/60   rounded-full p-1 px-2 dark:bg-neutral-700/40"
+              >
                 <span>Download</span>
                 <PiArrowDownThin />
-              </button>
+              </a>
             </div>
           </div>
         </div>
