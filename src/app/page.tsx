@@ -1,19 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
-'use client';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { useTheme } from 'next-themes';
+"use client";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
 import {
   PiArrowUpRight,
   PiArrowDownThin,
   PiGithubLogoThin,
   PiLinkedinLogoLight,
-} from 'react-icons/pi';
+} from "react-icons/pi";
 
-import { IoIosMailUnread } from 'react-icons/io';
-import Link from 'next/link';
-import { RiTwitterXLine } from 'react-icons/ri';
-import { Tooltip } from '@nextui-org/react';
+import { IoIosMailUnread } from "react-icons/io";
+import Link from "next/link";
+import { RiTwitterXLine } from "react-icons/ri";
+import { Tooltip } from "@nextui-org/react";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -36,7 +36,7 @@ export default function Home() {
           <motion.img
             whileHover={{ scale: 3 }}
             className="h-full w-full duration-300 transition-all ease-in-out object-cover"
-            src={theme == 'light' ? '/lightm.bmp' : '/map.webp'}
+            src={theme == "light" ? "/lightm.bmp" : "/map.webp"}
             alt=""
           />
         </motion.div>
@@ -60,7 +60,7 @@ export default function Home() {
             <div className="w-full h-[0.9px] dark:bg-neutral-600 bg-neutral-400/60 mt-1 top-7  " />
             <div className="">
               <p className="text-xs font-semibold max-sm:mt-16 sm:mt-4  ">
-                Available for freelance <br /> design projects. Hit me up <br />{' '}
+                Available for freelance <br /> design projects. Hit me up <br />{" "}
                 for a collab 🦾
               </p>
 
@@ -214,14 +214,16 @@ export default function Home() {
                   width={200}
                   height={200}
                   className="w-14 h-14 rounded-full object-cover"
-                  src="/jo4.jpeg"
+                  src="/next-js.svg"
                   alt=""
                 />
 
                 <div>
-                  <p className="text-xs">Fusion Pro Presentation</p>
+                  <p className="text-xs">Go office</p>
                   <p className="text-xs">
-                    I've come up with something truly unique
+                    Implemented Next.js and Redux for internationalization, RTK
+                    Query for API, Redux for state, optimized performance, and
+                    ensured seamless user experience.
                   </p>
                 </div>
 
@@ -230,7 +232,33 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+
             <div className="bg-[#F5F5F5]  dark:bg-[#1B1B1B] rounded-md px-1  relative">
+              <div className="flex justify-between items-center p-2  gap-x-2 mt-4">
+                <Image
+                  width={300}
+                  height={300}
+                  className="w-14 h-14 rounded-full object-cover"
+                  src="/next-js.svg"
+                  alt=""
+                />
+
+                <div>
+                  <p className="text-xs">G Lab</p>
+                  <p className="text-xs">
+                    Integrating Recharts in Next.js for data visualization with
+                    internationalization. Developing backend APIs with Nest.js
+                    and MySQL for data management.
+                  </p>
+                </div>
+
+                <ul className="menu">
+                  <a href="#0"></a>
+                </ul>
+              </div>
+            </div>
+
+            {/* <div className="bg-[#F5F5F5]  dark:bg-[#1B1B1B] rounded-md px-1  relative">
               <div className="flex justify-between items-center p-2  gap-x-2 mt-4">
                 <Image
                   width={300}
@@ -251,29 +279,7 @@ export default function Home() {
                   <a href="#0"></a>
                 </ul>
               </div>
-            </div>
-            <div className="bg-[#F5F5F5]  dark:bg-[#1B1B1B] rounded-md px-1  relative">
-              <div className="flex justify-between items-center p-2  gap-x-2 mt-4">
-                <Image
-                  width={300}
-                  height={300}
-                  className="w-14 h-14 rounded-full object-cover"
-                  src="/jo4.jpeg"
-                  alt=""
-                />
-
-                <div>
-                  <p className="text-xs">Fusion Pro Presentation</p>
-                  <p className="text-xs">
-                    I've come up with something truly unique
-                  </p>
-                </div>
-
-                <ul className="menu">
-                  <a href="#0"></a>
-                </ul>
-              </div>
-            </div>
+            </div> */}
           </div>
           {/* <Products /> */}
         </div>
@@ -287,7 +293,7 @@ export default function Home() {
             <div className="flex justify-center gap-x-2 px-2">
               <Tooltip showArrow={true} content="X (Twitter)">
                 <Link
-                  href={'https://twitter.com/roshan0905'}
+                  href={"https://twitter.com/roshan0905"}
                   className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
                 >
                   <RiTwitterXLine className="text-xl" />
@@ -295,7 +301,7 @@ export default function Home() {
               </Tooltip>
               <Tooltip showArrow={true} content="GitHub">
                 <Link
-                  href={'https://github.com/Surender0905'}
+                  href={"https://github.com/Surender0905"}
                   className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
                 >
                   <PiGithubLogoThin className="text-xl" />
@@ -303,7 +309,7 @@ export default function Home() {
               </Tooltip>
               <Tooltip showArrow={true} content="Linkedin">
                 <Link
-                  href={'https://www.linkedin.com/in/surender0905/'}
+                  href={"https://www.linkedin.com/in/surender0905/"}
                   className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
                 >
                   <PiLinkedinLogoLight className="text-xl" />
@@ -311,7 +317,7 @@ export default function Home() {
               </Tooltip>
               <Tooltip showArrow={true} content="E-mail">
                 <Link
-                  href={'https://twitter.com/roshan0905'}
+                  href={"https://twitter.com/roshan0905"}
                   className="rounded-full border dark:border-neutral-600 cursor-pointer border-neutral-400/60 p-2 w-16 h-16 flex items-center justify-center"
                 >
                   <IoIosMailUnread className="text-xl" />
@@ -335,21 +341,21 @@ export default function Home() {
                   width={40}
                   height={40}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/js.png'}
+                  src={"/js.png"}
                   alt="icon"
                 />
                 <Image
                   width={40}
                   height={40}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/py.png'}
+                  src={"/py.png"}
                   alt="icon"
                 />
                 <Image
                   width={40}
                   height={40}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/go.png'}
+                  src={"/go.png"}
                   alt="icon"
                 />
               </div>
@@ -361,28 +367,28 @@ export default function Home() {
                   width={40}
                   height={40}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/tail.png'}
+                  src={"/tail.png"}
                   alt="icon"
                 />
                 <Image
                   width={40}
                   height={40}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/react.png'}
+                  src={"/react.png"}
                   alt="icon"
                 />
                 <Image
                   width={40}
                   height={40}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/next-js.svg'}
+                  src={"/next-js.svg"}
                   alt="icon"
                 />
                 <Image
                   width={40}
                   height={40}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/vue.svg'}
+                  src={"/vue.svg"}
                   alt="icon"
                 />
               </div>
@@ -394,14 +400,14 @@ export default function Home() {
                   width={40}
                   height={40}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/node.png'}
+                  src={"/node.png"}
                   alt=""
                 />
                 <Image
                   width={40}
                   height={40}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/exp.avif'}
+                  src={"/exp.avif"}
                   alt=""
                 />
 
@@ -409,7 +415,7 @@ export default function Home() {
                   width={40}
                   height={40}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/nest.svg'}
+                  src={"/nest.svg"}
                   alt=""
                 />
 
@@ -417,14 +423,14 @@ export default function Home() {
                   width={60}
                   height={60}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/md.svg'}
+                  src={"/md.svg"}
                   alt=""
                 />
                 <Image
                   width={60}
                   height={60}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/mysql.svg'}
+                  src={"/mysql.svg"}
                   alt=""
                 />
               </div>
@@ -436,21 +442,21 @@ export default function Home() {
                   width={40}
                   height={40}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/gitv.png'}
+                  src={"/gitv.png"}
                   alt="icon"
                 />
                 <Image
                   width={40}
                   height={40}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/hub.png'}
+                  src={"/hub.png"}
                   alt="icon"
                 />
                 <Image
                   width={40}
                   height={40}
                   className="h-full duration-300 hover:scale-110 transition-all ease-in-out object-cover"
-                  src={'/docker.png'}
+                  src={"/docker.png"}
                   alt="icon"
                 />
               </div>
@@ -523,7 +529,7 @@ export default function Home() {
                   work effectively.
                 </p>
               </div>
-            </div>{' '}
+            </div>{" "}
             <div className="px-2 my-3 ">
               <div className="w-full h-[0.9px] dark:bg-neutral-800  bg-neutral-400/40 " />
             </div>
